@@ -8,7 +8,7 @@ from discord.ext import commands
 from settings import settings
 from googletrans import Translator
 
-### Comandos necesarios para el funcionamiento de 
+### Comandos necesarios para el funcionamiento de las funciones
 
 translator = Translator()
 
@@ -17,7 +17,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='$', intents=intents)
 
-###
+### Inicialización del bot
 @bot.event
 async def on_ready():
     print(f'We have logged in as {bot.user}')
