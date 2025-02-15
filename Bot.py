@@ -37,13 +37,6 @@ async def hola(ctx):
     time.sleep(2)
     await ctx.send(f'Si necesitas saber que comandos puedo utilizar, utiliza el comando $help_me')
 
-### Seleccionar plataforma (todavía no fucnional)
-#@bot.command()
-#async def seleccionar(ctx, texto):
-#    aplicacion = texto
-#    await ctx.send("Plataforma seleccionada: ", aplicacion)
-#    if (aplicacion == "Steam"):
-#        url = "https://store.steampowered.com/"
 
 ### Instalar la plataforma
 @bot.command()
@@ -52,7 +45,7 @@ async def instalar(ctx):
     if (aplicacion == "Steam"):
         await ctx.send(f'Para installar Steam necesitas el instalador que puedes obtener directamente en https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe para Windouws, https://cdn.fastly.steamstatic.com/client/installer/steam.dmg para Mac o https://support.google.com/chromebook?p=steam_on_chromebook para Chromebook; también puedes explorar en la página oficial de Steam (https://store.steampowered.com/)')
 
-### Buscar videojuegos (por ahora llega solo a géneros, pero pronto llegará a más)
+### Buscar videojuegos (por ahora llega solo a géneros)
 @bot.command()
 async def buscar(ctx):
     aplicacion = "Steam"
