@@ -1,0 +1,1 @@
+Este proyecto es un bot que tiene las funciones de explicar y buscar géneros de videojuegos; puede proporcionar información acerca de todos géneros de los videojuegos y llevarte a las diferantes clasificaciones de videojuegos en Steam. También incluye un comando para instalar Steam en diferentes dispositivos.
