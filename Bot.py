@@ -30,7 +30,7 @@ async def help_me(ctx):
 ### Saludo
 @bot.command()
 async def hola(ctx):
-    await ctx.send(f'Que tal! Soy un bot {bot.user}, mi proposito es ayudarte a encontrar el mejor videojuego para tí despúes de que me hables de tus preferencias. Puedo buscar en Steam por ahora')
+    await ctx.send(f'Que tal! Soy un bot {bot.user}, mi proposito es ayudarte a encontrar el mejor genero de videojuego para tí. Puedo buscar en Steam por ahora')
     time.sleep(3)
     ### Proximamnete se agregarán más plataformas de las que se podrá buscar
     #await ctx.send(f'Para definir en que plataforma prefieres buscar, utiliza el comando $seleccionar y el nombre de la plataforma')
