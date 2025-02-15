@@ -3,10 +3,12 @@
 import discord
 import requests
 import time
+import os
+import webserver
 from bs4 import BeautifulSoup
 from discord.ext import commands
-from settings import settings
 from googletrans import Translator
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 
 ### Comandos necesarios para el funcionamiento de 
 
@@ -45,7 +47,7 @@ async def instalar(ctx):
     if (aplicacion == "Steam"):
         await ctx.send(f'Para installar Steam necesitas el instalador que puedes obtener directamente en https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe para Windouws, https://cdn.fastly.steamstatic.com/client/installer/steam.dmg para Mac o https://support.google.com/chromebook?p=steam_on_chromebook para Chromebook; también puedes explorar en la página oficial de Steam (https://store.steampowered.com/)')
 
-### Buscar videojuegos (por ahora llega solo a géneros)
+### Buscar videojuegos (por ahora llega solo a géneros, pero pronto llegará a más)
 @bot.command()
 async def buscar(ctx):
     aplicacion = "Steam"
@@ -165,4 +167,6 @@ async def limpiar(ctx):
     await ctx.channel.purge()
     await ctx.send("Mensajes eliminados", delete_after = 3)
 
-bot.run(settings['TOKEN'])
+
+webserver.keep_alive()
+bot.run(DISCORD_TOKEN)
