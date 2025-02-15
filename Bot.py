@@ -107,7 +107,6 @@ async def genero(ctx):
     tamaño2 = len(temp2)
 
     arreglo = [0] * tamaño
-    parrafo = [""] * (tamaño+tamaño2)
     categoria = [""] * 2 * (tamaño+tamaño2)
     titulos = [""] * (tamaño2)
     j = 0 
